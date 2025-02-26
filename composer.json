@@ -5,9 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hlmqz\\Jwt\\": "src/"
+            "Hlmqz\\JWT\\": "src/"
         }
     },
+    "keywords": [
+        "php",
+        "jwt"
+    ],
     "authors": [
         {
             "name": "Hemerson Marquez",
