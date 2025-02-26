@@ -1,0 +1,20 @@
+{
+    "name": "hlmqz/php-jwt",
+    "description": "PHP Authentication with JWT method",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hlmqz\\Jwt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hemerson Marquez",
+            "email": "hlmarquezm@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.4"
+    }
+}
