@@ -1,6 +1,6 @@
 {
     "name": "hlmqz/php-jwt",
-    "description": "Simple PHP authentication with JWT method from version 8.4",
+    "description": "Simple PHP authentication with JWT/JWK method from version 8.4",
     "type": "library",
     "license": "MIT",
     "autoload": {
