@@ -1,6 +1,6 @@
 # PHP 8.4  - JWT (JSON Web Token)
 
-Esta Paquete se creo para implementar la utilidad de generar JWT (y JWK) de manera sencilla,
+Este Paquete se creo para implementar la utilidad de generar JWT (y JWK) de manera sencilla,
 con funcionalidades no atadas a frameworks pero que se pueden facilmente incluir en uno.
 
 Este paquete permite generar JWT de manera dinámica y con token diferentes así sean con los mismos
@@ -179,6 +179,28 @@ $refPublic = $jwkChecker->keyIdentifier;
 $publicKey = file_get_contents("pat/to/file/{$refPublic}.pem");
 
 $jwkChecker->key = $publicKey;
+
+```
+
+### Funcionalidad de generar pares de llaves RSA
+
+Este paquete también trae la funcionalidad de generar pares de llaves RSA pública y privada
+para no depender, puede generarlas y guardarlas a necesidad.
+
+```php
+
+use Hlmqz\JWT\JWKGenerator;
+
+// generar claves
+$pair = JWKGenerator::newKeyPair();
+
+$pair['privateKey']; //acceder al contenido de la llave privada.
+
+$pair['publicKey']; //acceder al contenido de la llave pública.
+
+// inclusive si ya tiene una llave privada, puede generar la publica con:
+
+$publicKey = JWKGenerator::getPublicKey($privateKey);
 
 ```
 
