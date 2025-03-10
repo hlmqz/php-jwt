@@ -118,7 +118,7 @@ $jwtCkeck->key = $secretKey;
 
 // basta con preguntar si es válido, otorgará los datos del contenido.
 
-if($$jwtCkeck->isValid){
+if($jwtCkeck->isValid){
 	// con el atributo content obotiene el mismo contenido establecido al construir el token.
 	$content = $jwtCkeck->content;
 	// en dado caso que requiera obtener todo el cuerpo del token, puede hacerlo con el atributo body.
